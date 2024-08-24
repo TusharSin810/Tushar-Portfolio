@@ -1,11 +1,15 @@
 import React from 'react'
 import ParticlesComponent from './components/Particles'
+import Navbar from './components/Navbar'
 
 function App() {
   return (
     <div>
       <ParticlesComponent id ="particles"/>
-      <h1 className='flex justify-center text-2xl font-extrabold'>Hello There</h1>
+       <Navbar />
+      <div className='flex items-center justify-center min-h-96'>
+        <h1 className='text-2xl font-extrabold'>Hello There</h1>
+      </div>
     </div>
   )
 }

@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 #particles{
-    @apply -z-10 absolute h-5/6 w-full
+    @apply -z-10 fixed h-5/6 w-full
 }
