@@ -19,7 +19,7 @@ const LoadingContainer = ({ onLoaded }) => {
     const timer = setTimeout(() => {
       setLoading(false);
       onLoaded();
-    }, 2000); // Adjust this timeout to control the overall loading duration
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, [onLoaded]);
@@ -27,18 +27,18 @@ const LoadingContainer = ({ onLoaded }) => {
   useEffect(() => {
     const wordInterval = setInterval(() => {
       setCurrentWord((prev) => (prev + 1) % words.length);
-    }, 250); // Adjust this to control the speed of the word change
+    }, 200);
 
     return () => clearInterval(wordInterval);
   }, [words.length]);
 
   return (
     <div
-      className={`fixed inset-0 flex items-center justify-center bg-black transition-opacity duration-500 ${loading ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+      className={"fixed inset-0 flex items-center justify-center bg-black"}
     >
       <div className="text-center">
         <h2 className="text-4xl font-bold text-white">
-          {words[currentWord]}
+          &#8226; {words[currentWord]}
           <div className="dot inline-block"></div>
         </h2>
       </div>
