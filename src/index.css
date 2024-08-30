@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 #particles {
-    @apply -z-10 absolute h-svh w-full
+    @apply -z-10 absolute h-svh w-full 
 }

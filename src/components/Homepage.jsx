@@ -22,7 +22,7 @@ function Homepage() {
             </h2>
           </div>
           <div className='min-h-screen'>
-            <p className='flex justify-center'>Hello my name is Tushar Singhal. I am a web developer.</p>
+            <p className='flex justify-center bg-white h-screen'>Hello my name is Tushar Singhal. I am a web developer.</p>
           </div>
     </div>
   )

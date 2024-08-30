@@ -7,10 +7,23 @@ export default {
   theme: {
     extend: {
         transitionDuration: {
-          '3000': '3000ms',
+          '2000': '2000ms',
       }
     },
   },
-  plugins: [],
+  plugins: [
+    function ({addUtilities}){
+      const newUtilities = {
+        '.no-scrollbar::-webkit-scrollbar':{
+          display: 'none',
+        },
+        '.no-scrollbar':{
+          '-ms-overflow-style':'none',
+          'scrollbar-width': 'none'
+        },
+      }
+      addUtilities(newUtilities) 
+    }
+  ],
 }
 
