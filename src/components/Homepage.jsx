@@ -23,11 +23,11 @@ function Homepage() {
               <span className='text-[#4D0011]'>{typeEffect}</span>
               <span className='text-[#4B443C] font-bold'><Cursor/></span>
             </h2>
-            <div className='flex justify-evenly'>
-              <SocialIcon url='https://x.com/TusharS91319723' />
-              <SocialIcon url='https://github.com/TusharSin810' />
-              <SocialIcon url='https://www.linkedin.com/in/tushar-singhal-921a41259/' />
-              <SocialIcon url='mailto:tsinghal666@gmail.com' />
+            <div className='flex justify-start gap-4 my-1'>
+              <SocialIcon url='https://x.com/TusharS91319723' target='_blank' />
+              <SocialIcon url='https://github.com/TusharSin810' target='_blank' />
+              <SocialIcon url='https://www.linkedin.com/in/tushar-singhal-921a41259/' target='_blank'/>
+              <SocialIcon url='mailto:tsinghal666@gmail.com' target='_blank' bgColor='#4D0011'/>
             </div>
           </div>
           <div className=''>
