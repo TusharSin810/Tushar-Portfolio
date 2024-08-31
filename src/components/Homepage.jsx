@@ -14,7 +14,7 @@ function Homepage() {
   return (
     <div>
         <Navbar />       
-          <div className='flex flex-col mx-20 my-14 min-h-screen'>
+          <div className='flex flex-col mx-20 my-14 h-screen'>
             <h1 className='text-5xl font-extrabold'>Hi,<br/>I'm Tushar Singhal</h1>
             <h2 className='my-3 font-bold text-2xl'>I Am Into {" "}  
               <span className='text-[#4D0011]'>{typeEffect}</span>

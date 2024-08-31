@@ -23,14 +23,14 @@ const App = () => {
   }, [loading]);
 
   return (
-    <div className="h-screen w-screen no-scrollbar overflow-y-scroll"> 
+    <div className="h-screen w-screen no-scrollbar overflow-y-scroll overflow-x-hidden"> 
       <ParticlesComponent id="particles"/> 
       <div className={`transition-opacity duration-2000 ease-in-out ${
           loading ? 'opacity-100' : 'opacity-0'
         } ${transitionEnded ? 'pointer-events-none' : 'pointer-events-auto'}`}>
         <LoadingContainer isActive ={loading}/>
       </div>
-      <div className={`transition-opacity duration-2000 delay-500 ease-in-out ${
+      <div className={`transition-opacity duration-2000 delay-700 ease-in-out ${
           loading ? 'opacity-0' : 'opacity-100'
         }`}>
         <Homepage />  
