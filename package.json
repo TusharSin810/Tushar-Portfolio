@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/react": "^2.1.5",
+    "@heroicons/react": "^2.1.5",
     "@tsparticles/all": "^3.5.0",
     "@tsparticles/react": "^3.0.0",
     "gsap": "^3.12.5",
