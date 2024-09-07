@@ -22,7 +22,7 @@ export default function Navbar() {
               <img
                 alt="Your Company"
                 src="/images/Avatar.png"
-                className="h-8 w-auto rounded-full"
+                className="h-10 w-auto rounded-full"
               />
             </div>
             <div className="hidden sm:ml-6 sm:block">
@@ -51,7 +51,7 @@ export default function Navbar() {
           </div>      
         </div>
       </div>
-
+      
       <DisclosurePanel className="sm:hidden bg-[#53565A] bg-opacity-50">
         <div className="space-y-1 px-2 pb-3 pt-2">
           {navigation.map((item) => (

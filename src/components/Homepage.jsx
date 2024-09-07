@@ -2,6 +2,7 @@ import React from 'react'
 import {useTypewriter, Cursor} from 'react-simple-typewriter'
 import { SocialIcon } from 'react-social-icons'
 import Navbar from './Navbar'
+import About from './About'
 
 
 
@@ -36,17 +37,7 @@ function Homepage() {
             </div>
             <img src="/images/Avatar.png" alt="Avatar image" className='h-auto w-auto max-w-96  max-h-96 mt-10 rounded-full'/>
           </div>
-
-          <div className='h-screen bg-white'>
-               <h2 className='text-2xl font-extrabold flex w-screen justify-center p-4'>About Me</h2>
-              <p className='p-4'>
-                I’m an undergraduate student pursuing a B.Tech in Electronics and Communication Engineering at Jaypee Institute of Information Technology (JIIT), Noida. Passionate about coding and full-stack development, I enjoy building dynamic, scalable web applications with a focus on innovation and performance.
-              </p>
-              <p className='p-4'>
-                Currently, I’m expanding my knowledge in Web3, Data Science, and Machine Learning, while also pursuing a distance BSc program in Data Science and Programming from IIT Madras. With strong communication, leadership skills, and a collaborative mindset, I’m dedicated to delivering impactful, user-centric software.
-              </p> 
-              <p className='p-4'>"Always exploring new tech stacks to push boundaries and innovate."</p>
-          </div>
+          <About />
     </div>
   )
 }
