@@ -4,6 +4,7 @@ import { SocialIcon } from 'react-social-icons'
 import Navbar from './Navbar'
 import About from './About'
 import Skills from './Skills'
+import Projects from './Projects'
 
 
 
@@ -40,6 +41,7 @@ function Homepage() {
           </div>
           <About />
           <Skills />
+          <Projects />
     </div>
   )
 }
