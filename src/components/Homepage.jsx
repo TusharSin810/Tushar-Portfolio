@@ -3,6 +3,7 @@ import {useTypewriter, Cursor} from 'react-simple-typewriter'
 import { SocialIcon } from 'react-social-icons'
 import Navbar from './Navbar'
 import About from './About'
+import Skills from './Skills'
 
 
 
@@ -38,7 +39,7 @@ function Homepage() {
             <img src="/images/Avatar.png" alt="Avatar image" className='h-auto w-auto max-w-96  max-h-96 mt-10 rounded-full'/>
           </div>
           <About />
-          <div className='h-screen bg-[#53565A]'></div>
+          <Skills />
     </div>
   )
 }

@@ -17,7 +17,7 @@ function About() {
                 <p className='hidden p-4 sm:flex sm:w-3/5'>
                     Currently, I’m expanding my knowledge in Web3, Data Science, and Machine Learning, while also pursuing a distance BSc program in Data Science and Programming from IIT Madras. With strong communication, leadership skills, and a collaborative mindset, I’m dedicated to delivering impactful, user-centric software.
                 </p> 
-                <p className='p-6'>"Always exploring new tech stacks to push boundaries and innovate."</p>
+                <p className='px-6 pb-2'>"Always exploring new tech stacks to push boundaries and innovate."</p>
             </div>
         </div>
     </div>
