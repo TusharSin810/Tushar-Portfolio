@@ -27,8 +27,9 @@ function Homepage() {
                 <span className='text-[#4D0011]'>{typeEffect}</span>
                 <span className='text-[#4B443C] font-bold'><Cursor/></span>
               </h2>
-              <button className='bg-[#4B443C] py-1 px-2 m-2 mb-10 rounded-xl text-[#E4E5E8]'>About Me</button>
-              <button className='bg-[#4B443C] py-1 px-2 m-2 mb-10 rounded-xl text-[#E4E5E8]'>Resume</button>
+              <button className='bg-[#4B443C] py-1 px-2 m-2 mb-10 rounded-xl font-semibold text-[#E4E5E8]'>About Me</button>
+              <button className='bg-[#4B443C] py-1 px-2 m-2 mb-10 rounded-xl font-semibold text-[#E4E5E8]'>Resume</button>
+              <button className='bg-[#4B443C] py-1 px-2 m-2 mb-10 rounded-xl font-semibold text-[#E4E5E8]'>Chat With Me </button>
               <div className='flex justify-start gap-4 my-1'>
                 <SocialIcon url='https://x.com/TusharS91319723' target='_blank' className='hover:opacity-85' />
                 <SocialIcon url='https://github.com/TusharSin810' target='_blank' className='hover:opacity-85'/>
