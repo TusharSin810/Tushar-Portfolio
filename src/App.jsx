@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Homepage from "./components/Homepage"
+import Signup from "./components/Signup"
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path="/login" element={<Signup />} />
         </Routes>
       </BrowserRouter>
     </div>
