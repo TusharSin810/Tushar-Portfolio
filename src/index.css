@@ -5,3 +5,7 @@
 #particles {
     @apply -z-10 absolute h-svh w-screen 
 }
+
+#psignup{
+    @apply -z-10 absolute h-svh w-screen
+}
