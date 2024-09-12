@@ -2,11 +2,11 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Projects', href: '#', current: true },
+  { name: 'Projects', href: '#', current: false },
   { name: 'Experience', href: '#', current: false },
   { name: 'Education', href: '#', current: false },
   { name: 'Contact Me', href: '#', current: false },
-  { name: 'Sign-In/Log-In', href: '#', current: false },
+  { name: 'Sign-In/Log-In', href: '#', current: true },
 ]
 
 function classNames(...classes) {
@@ -34,8 +34,8 @@ export default function Navbar() {
                     href={item.href}
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
-                      item.current ? 'bg-transparent text-black' : 'text-black',
-                      'rounded-md px-3 py-2 text-sm font-medium',
+                      item.current ? 'bg-[#4D0011] text-[#E4E5E8] rounded-xl' : 'text-black',
+                      'px-3 py-2 text-sm font-medium',
                     )}
                   >
                     {item.name}
@@ -62,7 +62,7 @@ export default function Navbar() {
               href={item.href}
               aria-current={item.current ? 'page' : undefined}
               className={classNames(
-                item.current ? 'text-white' : 'text-white hover:bg-gray-700 hover:text-[#53565A]',
+                item.current ? 'text-[#E4E5E8] bg-[#4D0011] rounded-xl bg-opacity-90' : 'text-white hover:bg-gray-700 hover:text-[#53565A]',
                 'block rounded-md px-3 py-2 text-base font-medium',
               )}
             >
