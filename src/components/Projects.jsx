@@ -8,13 +8,14 @@ import CardActionArea from '@mui/material/CardActionArea';
 
 function Projects() {
   return (
-    <div className='h-screen bg-[#4B443C]'>
+    <div className='h-max bg-[#4B443C] p-10 pb-10'>
+      <h2 className='w-screen text-2xl font-extrabold text-white flex justify-center pb-4' >Projects</h2>
        <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
+          image="/images/Avatar.png"
           alt="green iguana"
         />
         <CardContent>
