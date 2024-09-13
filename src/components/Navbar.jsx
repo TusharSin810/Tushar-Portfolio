@@ -14,8 +14,8 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false) // Authentication state
-  const userProfilePic = "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" // Replace with actual user profile URL
+  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const userProfilePic = "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" 
 
   return (
     <Disclosure as="nav">
@@ -44,7 +44,6 @@ export default function Navbar() {
                     {item.name}
                   </a>
                 ))}
-                {/* Conditionally render the login button or profile */}
                 {!isLoggedIn ? (
                   <a
                     href="/login"
@@ -95,6 +94,22 @@ export default function Navbar() {
 
       <DisclosurePanel className="sm:hidden bg-[#53565A] bg-opacity-50">
         <div className="space-y-1 px-2 pb-3 pt-2">
+
+      {isLoggedIn ? (
+        <div className="flex items-center space-x-3 p-3">
+          <img alt="Profile" className="h-8 w-8 rounded-full" />
+          <span className="text-white">Hello</span>
+        </div>
+      ) : (
+        <DisclosureButton
+          as="a"
+          href="/login"
+          className="block w-full text-center text-white bg-[#4D0011] px-3 py-2 text-base font-medium rounded-xl"
+        >
+          Log-In
+        </DisclosureButton>
+      )}
+
           {navigation.map((item) => (
             <DisclosureButton
               key={item.name}
