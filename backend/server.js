@@ -1,8 +1,12 @@
 import express from 'express'
 import cors from 'cors'
+import {dirname} from "path"
+import { fileURLToPath } from "url";
 
 const app = express();
 const port = 3000;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const users = [];
 
@@ -22,6 +26,11 @@ app.post('/login', (req,res) => {
 })
     console.log(users);
 });
+
+app.get("/login",(req,res) => {
+    res.send(__dirname+"/index.html")
+})
+
 
 app.listen(port, (req,res) => {
     console.log(`Port is Listening on Port ${port}`);

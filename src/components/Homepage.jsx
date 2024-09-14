@@ -15,11 +15,21 @@ function Homepage() {
   const [transitionEnded, setTransitionEnded] = useState(false);
   
   useEffect(() => {
+    const visited = localStorage.getItem('visited','false');
+    if(!visited){
     const timer = setTimeout(() => {
       setLoading(false);
+      localStorage.setItem('visited','true');
+      setTimeout(() => {
+        localStorage.removeItem('visited');
+      },3 * 60 * 1000);
+    
     }, 2300);
 
     return () => clearTimeout(timer);
+  }else{
+    setLoading(false);
+  }
   }, []);
 
   useEffect(() => {

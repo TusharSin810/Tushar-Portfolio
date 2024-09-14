@@ -1,10 +1,12 @@
 import React from 'react'
 import ParticlesSignup from './ParticlesSignup'
 import axios from 'axios'
+import {useNavigate} from 'react-router-dom' 
 
 function Signup() {
-
-    async function signup(){
+  const navigate = useNavigate();
+    
+  async function signup(){   
         const username = document.getElementById("userid").value;  
         const password = document.getElementById("passid").value;
         
@@ -12,7 +14,8 @@ function Signup() {
             username: username,
             password: password
         });
-        alert("You are signed Up");    
+        alert("You are signed Up");
+        navigate("/");
     }
 
   return (
