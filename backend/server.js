@@ -4,10 +4,23 @@ import cors from 'cors'
 const app = express();
 const port = 3000;
 
-app.use(cors());
+const users = [];
 
-app.get('/', (req,res) => {
-    res.send("Hi from the server side");
+app.use(cors());
+app.use(express.json());
+
+app.post('/login', (req,res) => {
+    const username = req.body.username
+    const password = req.body.password
+    
+    users.push({
+        username: username,
+        password: password
+    });
+    res.json({
+        mssage:"You are loged in"
+})
+    console.log(users);
 });
 
 app.listen(port, (req,res) => {
