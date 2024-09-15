@@ -27,11 +27,6 @@ app.post('/login', (req,res) => {
     console.log(users);
 });
 
-app.get("/login",(req,res) => {
-    res.send(__dirname+"/index.html")
-})
-
-
 app.listen(port, (req,res) => {
     console.log(`Port is Listening on Port ${port}`);
 });
