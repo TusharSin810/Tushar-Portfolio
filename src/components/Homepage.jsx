@@ -14,23 +14,22 @@ function Homepage() {
   const [loading, setLoading] = useState(true);
   const [transitionEnded, setTransitionEnded] = useState(false);
   
-  useEffect(() => {
-    const visited = localStorage.getItem('visited','false');
-    if(!visited){
+useEffect(() => {
+  const visited = sessionStorage.getItem('visited');
+  
+  if (!visited) {
+    setLoading(true);
+
     const timer = setTimeout(() => {
       setLoading(false);
-      localStorage.setItem('visited','true');
-      setTimeout(() => {
-        localStorage.removeItem('visited');
-      },3 * 60 * 1000);
-    
+      sessionStorage.setItem('visited', 'true');
     }, 2300);
 
     return () => clearTimeout(timer);
-  }else{
+  } else {
     setLoading(false);
   }
-  }, []);
+}, []);
 
   useEffect(() => {
     if (!loading) {
