@@ -1,5 +1,6 @@
 import {useTypewriter, Cursor} from 'react-simple-typewriter'
 import { SocialIcon } from 'react-social-icons'
+import {motion} from 'framer-motion'
 
 function Header() {
 
@@ -29,7 +30,14 @@ function Header() {
               <SocialIcon url='tushar_singhal' target='_blank' className='hover:opacity-85'/> 
               </div>
             </div>
-            <img src="/images/Avatar.png" alt="Avatar image" className='h-auto w-auto max-w-96  max-h-96 mt-10 rounded-full'/>
+            <motion.img src="/images/Avatar.png" alt="Avatar image" className='h-auto w-auto max-w-96  max-h-96 mt-10 rounded-full'
+            whileHover={{
+              scale:1.1
+            }}
+            transition={{
+              duration:0.5
+            }}
+            ></motion.img>
         </div>
   )
 }
