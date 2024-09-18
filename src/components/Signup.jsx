@@ -1,50 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react';
 import ParticlesSignup from './ParticlesSignup'
-import axios from 'axios'
-import {useNavigate} from 'react-router-dom' 
 
 function Signup() {
-  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('login');
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
-  };    
-
-  async function signup(){   
-        const username = document.getElementById("userid").value;  
-        const password = document.getElementById("passid").value;
-        
-        await axios.post("http://localhost:3000/login", {
-            username: username,
-            password: password
-        });
-        alert("You are signed Up");
-        navigate("/");
-    }
+  };
 
   return (
-    <div className="mx-auto p-6 flex flex-col w-full md:w-1/2">
-      <ParticlesSignup id="psignup" />
-      <div className="flex justify-between mb-6">
+    <div>
+      <ParticlesSignup id="psignup"/>
+      <div className='flex flex-col w-1/2 justify-center m-auto h-screen'>
+      <div className="flex justify-between mb-4">
         <button
-          className={`p-2 w-full rounded-xl m-1 ${activeTab === 'login' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+          className={`p-1 w-full rounded-xl m-1 ${activeTab === 'login' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
           onClick={() => handleTabClick('login')}
         >
           Login
         </button>
         <button
-          className={`p-2 w-full rounded-xl m-1 ${activeTab === 'register' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+          className={`p-1 w-full rounded-xl m-1 ${activeTab === 'register' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
           onClick={() => handleTabClick('register')}
         >
           Register
         </button>
       </div>
       {activeTab === 'login' && (
-        <div className='w-full h-0'>
-          <div className="text-center mb-4 text-white">
+        <div className=' flex flex-col items-center'>
+          <div className="text-center mb-2 text-white">
             <p>Sign in with:</p>
-            <div className="flex justify-between mx-auto w-1/2">
+            <div className="flex flex-row justify-between gap-20">
               <button className="text-blue-500">
                 <i className="fab fa-facebook-f"></i>
               </button>
@@ -72,23 +58,23 @@ function Signup() {
             className="mb-4 p-2 border border-gray-300 w-full rounded"
           />
 
-          <div className="flex justify-between mb-4">
-            <label className="flex items-center">
+          <div className="flex flex-row justify-around w-full mb-4">
+            <label className="flex items-center text-white">
               <input type="checkbox" className="mr-2" /> Remember me
             </label>
             <a href="#" className="text-blue-500">Forgot password?</a>
           </div>
 
-          <button className="bg-blue-500 text-white w-full p-2 rounded mb-4">Sign in</button>
-          <p className="text-center">Not a member? <a href="#" className="text-blue-500">Register</a></p>
+          <button className="bg-blue-500 text-white w-4/5 p-2 rounded mb-4">Sign in</button>
+          <p className="text-center text-white">Not a member? <a href="#" className="text-blue-500">Register</a></p>
         </div>
       )}
 
       {activeTab === 'register' && (
-        <div>
-          <div className="text-center mb-4">
+        <div className='flex flex-col items-center'>
+          <div className="text-center mb-1 text-white">
             <p>Sign up with:</p>
-            <div className="flex justify-between mx-auto w-1/2">
+            <div className="flex flex-row justify-between w-full gap-20">
               <button className="text-blue-500">
                 <i className="fab fa-facebook-f"></i>
               </button>
@@ -102,41 +88,42 @@ function Signup() {
                 <i className="fab fa-github"></i>
               </button>
             </div>
-            <p className="text-center mt-4">or:</p>
+            <p className="text-center mt-3">or:</p>
           </div>
 
           <input
             type="text"
             placeholder="Name"
-            className="mb-4 p-2 border border-gray-300 w-full rounded"
+            className="mb-2 p-2 border border-gray-300 w-full rounded"
           />
           <input
             type="text"
             placeholder="Username"
-            className="mb-4 p-2 border border-gray-300 w-full rounded"
+            className="mb-2 p-2 border border-gray-300 w-full rounded"
           />
           <input
             type="email"
             placeholder="Email address"
-            className="mb-4 p-2 border border-gray-300 w-full rounded"
+            className="mb-2 p-2 border border-gray-300 w-full rounded"
           />
           <input
             type="password"
             placeholder="Password"
-            className="mb-4 p-2 border border-gray-300 w-full rounded"
+            className="mb-2 p-2 border border-gray-300 w-full rounded"
           />
 
           <div className="flex justify-center mb-4">
-            <label className="flex items-center">
+            <label className="flex items-center text-white">
               <input type="checkbox" className="mr-2" /> I agree to the terms
             </label>
           </div>
 
-          <button className="bg-blue-500 text-white w-full p-2 rounded mb-4">Sign up</button>
+          <button className="bg-blue-500 text-white w-4/5 p-2 rounded mb-4">Sign up</button>
         </div>
       )}
-    </div>
+    </div>  
+    </div>  
   );
 }
 
-export default Signup
+export default Signup;
