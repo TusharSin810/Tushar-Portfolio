@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
-import { ArrowLeftEndOnRectangleIcon, Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import {Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
   { name: 'Projects', href: '#', current: false },
@@ -45,12 +45,20 @@ export default function Navbar() {
                   </a>
                 ))}
                 {!isLoggedIn ? (
-                  <a
-                    href="/login"
-                    className="bg-[#4D0011] text-[#E4E5E8] px-3 py-2 text-sm font-medium rounded-xl"
-                  >
-                    Log-In
-                  </a>
+                  <div className='flex gap-x-3'>
+                    <a
+                      href="/login"
+                      className="bg-[#4D0011] text-[#E4E5E8] px-3 py-2 text-sm font-medium rounded-xl"
+                    >
+                      Log-In
+                    </a>
+                    <a
+                      href="/Register"
+                      className="bg-[#53565A] text-[#4D0011] px-3 py-2 text-sm font-medium rounded-xl"
+                    >
+                      Register
+                    </a>
+                  </div>
                 ) : (
                   <Menu as="div" className="relative ml-3">
                     <div>

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import ParticlesSignup from './ParticlesSignup'
+import {motion} from 'framer-motion'
 
 function Signup() {
-  const [activeTab, setActiveTab] = useState('login');
+  const [activeTab, setActiveTab] = useState();
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
@@ -11,8 +12,17 @@ function Signup() {
   return (
     <div>
       <ParticlesSignup id="psignup"/>
-      <div className='flex flex-col w-1/2 justify-center m-auto h-screen'>
-      <div className="flex justify-between mb-4">
+      <motion.div className='flex flex-col w-1/2 justify-center m-auto h-screen' 
+      initial={{y:-1000}}
+      animate={{y:0}}
+      transition={{duration:1.5}}
+      >
+      <motion.div className="flex justify-between mb-4"
+      key={activeTab}
+      initial={{y:-1000}}
+      animate={{y:0}}
+      transition={{duration:1.5}}
+      >
         <button
           className={`p-1 w-full rounded-xl m-1 ${activeTab === 'login' ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
           onClick={() => handleTabClick('login')}
@@ -25,9 +35,13 @@ function Signup() {
         >
           Register
         </button>
-      </div>
+      </motion.div>
       {activeTab === 'login' && (
-        <div className=' flex flex-col items-center'>
+        <motion.div className=' flex flex-col items-center'
+        initial={{x:-1000}}
+        animate={{x:0}}
+        transition={{duration:2}}
+        >
           <div className="text-center mb-2 text-white">
             <p>Sign in with:</p>
             <div className="flex flex-row justify-between gap-20">
@@ -66,12 +80,16 @@ function Signup() {
           </div>
 
           <button className="bg-blue-500 text-white w-4/5 p-2 rounded mb-4">Sign in</button>
-          <p className="text-center text-white">Not a member? <a href="#" className="text-blue-500">Register</a></p>
-        </div>
+        <p className="text-center text-white">Not a member? <a onClick={() => handleTabClick('register')} className="text-blue-500 cursor-pointer">Register</a></p>
+        </motion.div>
       )}
 
       {activeTab === 'register' && (
-        <div className='flex flex-col items-center'>
+        <motion.div className='flex flex-col items-center'
+        initial={{x:-1000}}
+        animate={{x:0}}
+        transition={{duration:2}}
+        >
           <div className="text-center mb-1 text-white">
             <p>Sign up with:</p>
             <div className="flex flex-row justify-between w-full gap-20">
@@ -119,9 +137,9 @@ function Signup() {
           </div>
 
           <button className="bg-blue-500 text-white w-4/5 p-2 rounded mb-4">Sign up</button>
-        </div>
+        </motion.div>
       )}
-    </div>  
+    </motion.div>  
     </div>  
   );
 }
