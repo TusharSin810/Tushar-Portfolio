@@ -1,31 +1,99 @@
 import express from 'express'
 import cors from 'cors'
-import {dirname} from "path"
-import { fileURLToPath } from "url";
+import {JWT_SECRET} from './auth.js'
+import mongoose from 'mongoose';
+import { UserModel } from './db.js';
+import jwt from "jsonwebtoken";
+import {z} from "zod"
 
 const app = express();
 const port = 5000;
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
-const users = [];
+mongoose.connect("mongodb+srv://tushar:tushar%40810@cluster0.gyufc.mongodb.net/TusharPortfolio");
 
 app.use(cors());
 app.use(express.json());
 
-app.post('/login', (req,res) => {
-    const email = req.body.email
-    const password = req.body.password
+app.post("/signin", async (req,res) => {
+    const email = req.body.email;
+    const password = req.body.password;
+
+    const user = await UserModel.findOne({
+        email: email
+    })
+
+    if(!user){
+        res.status(403).json({
+            message: "User Does not Exist Please signin"
+        })
+        return
+    }
+
+    const passMatch = await bcrypt.compare(password,user.password);
     
-    users.push({
-        email: email,
-        password: password
-    });
-    res.json({
-        mssage:"You are loged in"
-})
-    console.log(users);
+
+    if(passMatch){
+        const token = jwt.sign({
+            id:user._id.toString()
+    },JWT_SECRET)
+        res.json({
+            token:token
+        })
+    }else{
+        res.status(403).json({
+            message:"Innorect Credentials"
+        })
+    }
+
 });
+
+
+app.post("/signup", async (req,res) => {
+    
+    const requiredBody = z.object({
+        email: z.string().email(),
+        name: z.string(),
+        password: z.string()
+    })
+    
+    const parseSuccess = requiredBody.safeParse(req.body);
+    
+    if(!parseSuccess.success){
+        res.json({
+            error: parseSuccess.error.message,
+        })
+        return
+    }
+    const email = req.body.email;
+    const password = req.body.password;
+    const name = req.body.name;
+
+    let errthrown = false;
+
+    try{
+        const hashpass = await bcrypt.hash(password,10);
+        console.log(hashpass);
+
+        await UserModel.create({
+            email: email,
+            password: hashpass,
+            name: name
+        })
+    }catch(e){
+        res.json({
+            message:"User already Exists"
+        })
+        errthrown = true;
+    }
+    if(!errthrown){
+        res.json({
+            message:"You are logged In"
+        })
+    }
+    
+
+});
+
 
 app.listen(port, (req,res) => {
     console.log(`Port is Listening on Port ${port}`);

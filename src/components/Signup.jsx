@@ -1,20 +1,45 @@
 import React, { useState } from 'react';
 import ParticlesSignup from './ParticlesSignup'
 import {motion} from 'framer-motion'
+import {useNavigate } from 'react-router-dom';
+import axios from 'axios'
+
+
+  async function signin(){
+    const email = document.getElementById('userEmail').value
+    const password = document.getElementById('userPassword').value
+    await axios.post("http://localhost:5000/signin",{
+       email:email,
+       password:password
+    });
+  }
+
+  async function signup(){
+    const name = document.getElementById('uName').value
+    const email = document.getElementById('uEmail').value
+    const password = document.getElementById('uPassword').value
+    await axios.post("http://localhost:5000/signup",{
+       name:name,
+       email:email,
+       password:password
+    });
+  }
 
 function Signup() {
   const [activeTab, setActiveTab] = useState();
+  const navigate = useNavigate()
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
 
+
   return (
     <div>
       <ParticlesSignup id="psignup"/>
       <motion.div className='flex flex-col w-1/2 justify-center m-auto h-screen' 
-      initial={{y:-1000}}
-      animate={{y:0}}
+      initial={{x:-1000}}
+      animate={{x:0}}
       transition={{duration:1.5}}
       >
       <motion.div className="flex justify-between mb-4"
@@ -64,11 +89,13 @@ function Signup() {
           <input
             type="email"
             placeholder="Email address"
+            id='userEmail'
             className="mb-4 p-2 border border-gray-300 w-full rounded"
           />
           <input
             type="password"
             placeholder="Password"
+            id='userPassword'
             className="mb-4 p-2 border border-gray-300 w-full rounded"
           />
 
@@ -79,7 +106,7 @@ function Signup() {
             <a href="#" className="text-blue-500">Forgot password?</a>
           </div>
 
-          <button className="bg-blue-500 text-white w-4/5 p-2 rounded mb-4">Sign in</button>
+          <button className="bg-blue-500 text-white w-4/5 p-2 rounded mb-4" onClick={() => signin()}>Sign in</button>
         <p className="text-center text-white">Not a member? <a onClick={() => handleTabClick('register')} className="text-blue-500 cursor-pointer">Register</a></p>
         </motion.div>
       )}
@@ -111,22 +138,20 @@ function Signup() {
 
           <input
             type="text"
-            placeholder="Name"
-            className="mb-2 p-2 border border-gray-300 w-full rounded"
-          />
-          <input
-            type="text"
             placeholder="Username"
+            id='uName'
             className="mb-2 p-2 border border-gray-300 w-full rounded"
           />
           <input
             type="email"
+            id='uEmail'
             placeholder="Email address"
             className="mb-2 p-2 border border-gray-300 w-full rounded"
           />
           <input
             type="password"
             placeholder="Password"
+            id='uPassword'
             className="mb-2 p-2 border border-gray-300 w-full rounded"
           />
 
@@ -136,7 +161,7 @@ function Signup() {
             </label>
           </div>
 
-          <button className="bg-blue-500 text-white w-4/5 p-2 rounded mb-4">Sign up</button>
+          <button className="bg-blue-500 text-white w-4/5 p-2 rounded mb-4" onClick={() => signup()}>Sign up</button>
         </motion.div>
       )}
     </motion.div>  
