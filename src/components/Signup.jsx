@@ -8,10 +8,12 @@ import axios from 'axios'
   async function signin(){
     const email = document.getElementById('userEmail').value
     const password = document.getElementById('userPassword').value
-    await axios.post("http://localhost:5000/signin",{
+    const response = await axios.post("http://localhost:5000/signin",{
        email:email,
        password:password
     });
+    console.log(response.data.token);
+    localStorage.setItem('token',response.data.token);   
   }
 
   async function signup(){

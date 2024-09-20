@@ -1,15 +1,21 @@
 import express from 'express'
 import cors from 'cors'
 import {JWT_SECRET} from './auth.js'
-import mongoose from 'mongoose';
-import { UserModel } from './db.js';
-import jwt from "jsonwebtoken";
+import mongoose from 'mongoose'
+import { UserModel } from './db.js'
+import jwt from "jsonwebtoken"
 import {z} from "zod"
+import * as dotenv from 'dotenv'
+import bcrypt from 'bcrypt'
+
+dotenv.config({path:'../.env'});
 
 const app = express();
 const port = 5000;
 
-mongoose.connect("mongodb+srv://tushar:tushar%40810@cluster0.gyufc.mongodb.net/TusharPortfolio");
+mongoose.connect(process.env.MONGODB_URI)
+    .then(() => console.log('Database connected'))
+    .catch((err) => console.log('Database connection error:', err));
 
 app.use(cors());
 app.use(express.json());
