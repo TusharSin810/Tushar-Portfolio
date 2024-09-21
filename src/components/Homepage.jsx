@@ -8,8 +8,8 @@ import LoadingContainer from './LoadingContainer';
 import ParticlesComponent from './Particles'
 import Header from './Header'
 
-function Homepage() {
-
+function Homepage({isLoggedIn}) {
+  
   const [loading, setLoading] = useState(true);
   const [transitionEnded, setTransitionEnded] = useState(false);
   
@@ -48,7 +48,7 @@ useEffect(() => {
       <div className={`transition-opacity duration-2000 delay-700 ease-in-out ${
           loading ? 'opacity-0' : 'opacity-100'
         }`}>
-          <Navbar />       
+          <Navbar isLoggedIn={isLoggedIn}/>       
           <Header />
           <About />
           <Skills />

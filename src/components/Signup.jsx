@@ -4,8 +4,9 @@ import {motion} from 'framer-motion'
 import {useNavigate } from 'react-router-dom';
 import axios from 'axios'
 
+function Signup({isLoggedIn, setIsLoggedIn}) {
 
-  async function signin(){
+    async function signin(){
     const email = document.getElementById('userEmail').value
     const password = document.getElementById('userPassword').value
     const response = await axios.post("http://localhost:5000/signin",{
@@ -13,7 +14,11 @@ import axios from 'axios'
        password:password
     });
     console.log(response.data.token);
-    localStorage.setItem('token',response.data.token);   
+    localStorage.setItem('token',response.data.token);
+    if(localStorage.getItem('token')){
+      setIsLoggedIn(true);
+      navigate('/')
+    }   
   }
 
   async function signup(){
@@ -27,7 +32,7 @@ import axios from 'axios'
     });
   }
 
-function Signup() {
+
   const [activeTab, setActiveTab] = useState();
   const navigate = useNavigate()
 
