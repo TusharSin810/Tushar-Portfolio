@@ -1,9 +1,16 @@
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
       "./index.html",
       "./src/**/*.{js,ts,jsx,tsx}",
+      "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     screens: {
       'xs': '375',
@@ -19,7 +26,7 @@ export default {
       }
     },
   },
-  plugins: [
+  plugins: [addVariablesForColors,
     function ({addUtilities}){
       const newUtilities = {
         '.no-scrollbar::-webkit-scrollbar':{
@@ -35,3 +42,14 @@ export default {
   ],
 }
 
+function addVariablesForColors({
+  addBase,
+  theme
+}) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(Object.entries(allColors).map(([key, val]) => [`--${key}`, val]));
+
+  addBase({
+    ":root": newVars,
+  });
+}

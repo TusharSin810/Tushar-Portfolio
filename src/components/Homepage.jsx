@@ -8,7 +8,6 @@ import LoadingContainer from './LoadingContainer';
 import ParticlesComponent from './Particles'
 import Header from './Header'
 
-
 function Homepage() {
 
   const [loading, setLoading] = useState(true);
@@ -54,7 +53,7 @@ useEffect(() => {
           <About />
           <Skills />
           <Projects />
-          <Exp />  
+          <Exp />
       </div>
     </div>
     </div>
