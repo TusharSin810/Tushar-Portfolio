@@ -4,7 +4,7 @@ import {motion} from 'framer-motion'
 import {useNavigate } from 'react-router-dom';
 import axios from 'axios'
 
-function Signup({isLoggedIn, setIsLoggedIn}) {
+function Signup({setIsLoggedIn}) {
 
     async function signin(){
     const email = document.getElementById('userEmail').value
@@ -13,9 +13,9 @@ function Signup({isLoggedIn, setIsLoggedIn}) {
        email:email,
        password:password
     });
-    console.log(response.data.token);
-    localStorage.setItem('token',response.data.token);
-    if(localStorage.getItem('token')){
+    const userToken = response.data.token;
+    localStorage.setItem('token',userToken);
+    if(localStorage.getItem('token') == userToken){
       setIsLoggedIn(true);
       navigate('/')
     }   
