@@ -1,9 +1,11 @@
 import {useTypewriter, Cursor} from 'react-simple-typewriter'
 import { SocialIcon } from 'react-social-icons'
 import {motion} from 'framer-motion'
+import {useNavigate } from 'react-router-dom';
 
 function Header() {
 
+  const navigate = useNavigate()
   const [typeEffect] = useTypewriter({
     words: ['Full Stack','Machine Learning','Web3','Data Science'],
     loop:{},
@@ -11,6 +13,12 @@ function Header() {
     deleteSpeed: 40
   })
 
+  function chatpage(){
+    if(localStorage.getItem('token')){
+      navigate('/chatwithme')
+    }
+  }
+  
   return (
         <div className='flex flex-col h-svh m-6 my-10 sm:flex-row'>
             <div className='mt-4'>
@@ -21,7 +29,7 @@ function Header() {
               </h2>
               <button className='bg-[#4B443C] py-1 px-2 m-2 mb-10 rounded-xl font-semibold text-[#E4E5E8]'>About Me</button>
               <button className='bg-[#4B443C] py-1 px-2 m-2 mb-10 rounded-xl font-semibold text-[#E4E5E8]'>Resume</button>
-              <button className='bg-[#4B443C] py-1 px-2 m-2 mb-10 rounded-xl font-semibold text-[#E4E5E8]'>Chat With Me </button>
+              <button className='bg-[#4B443C] py-1 px-2 m-2 mb-10 rounded-xl font-semibold text-[#E4E5E8]' onClick={chatpage}>Chat With Me </button>
               <div className='flex justify-start gap-4 my-1'>
                 <SocialIcon url='https://x.com/TusharS91319723' target='_blank' className='hover:opacity-85' />
                 <SocialIcon url='https://github.com/TusharSin810' target='_blank' className='hover:opacity-85'/>

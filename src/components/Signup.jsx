@@ -5,7 +5,8 @@ import {useNavigate } from 'react-router-dom';
 import axios from 'axios'
 
 function Signup({setIsLoggedIn}) {
-
+    
+    const navigate = useNavigate()
     async function signin(){
     const email = document.getElementById('userEmail').value
     const password = document.getElementById('userPassword').value
@@ -34,7 +35,6 @@ function Signup({setIsLoggedIn}) {
 
 
   const [activeTab, setActiveTab] = useState();
-  const navigate = useNavigate()
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
