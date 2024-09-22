@@ -10,7 +10,7 @@ function Signup({setIsLoggedIn}) {
     async function signin(){
     const email = document.getElementById('userEmail').value
     const password = document.getElementById('userPassword').value
-    const response = await axios.post("http://localhost:5000/signin",{
+    const response = await axios.post("http://localhost:3000/user/signin",{
        email:email,
        password:password
     });
@@ -26,7 +26,7 @@ function Signup({setIsLoggedIn}) {
     const name = document.getElementById('uName').value
     const email = document.getElementById('uEmail').value
     const password = document.getElementById('uPassword').value
-    await axios.post("http://localhost:5000/signup",{
+    await axios.post("http://localhost:3000/user/signup",{
        name:name,
        email:email,
        password:password
