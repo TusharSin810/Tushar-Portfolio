@@ -16,6 +16,8 @@ function Header() {
   function chatpage(){
     if(localStorage.getItem('token')){
       navigate('/chatwithme')
+    }else{
+      navigate('/login')
     }
   }
   
