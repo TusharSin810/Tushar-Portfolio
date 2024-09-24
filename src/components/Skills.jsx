@@ -26,7 +26,7 @@ function Skills() {
   return (
     <div className='h-max bg-[#53565A] pb-16'>
       <h2 className='flex w-screen justify-center text-[#4D0011] font-extrabold text-2xl p-8'>Skills & Tools</h2>
-      <div className="grid grid-cols-3 px-10 gap-7 gap-x-8 sm:grid-cols-6 sm:px-80 sm:gap-5 relative">
+      <div className="flex flex-wrap gap-8 justify-center xs:px-44 lg:px-44">
         {skills.map((skill, index) => (
           <div
             key={skill.alt}
