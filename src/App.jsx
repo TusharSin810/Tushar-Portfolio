@@ -3,9 +3,11 @@ import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Homepage from "./components/Homepage"
 import Signup from "./components/Signup"
 import ChatPage from './components/ChatPage';
+import ProtectedRoute from './components/ProtectedRoute';
 
 const App = () => {
 
+  const isAuthenticated = !!localStorage.getItem('token');
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
     const savedLoginState = localStorage.getItem('isLoggedIn');
     const token = localStorage.getItem('token');
@@ -28,7 +30,7 @@ const App = () => {
           <Route path="/" element={<Homepage isLoggedIn={isLoggedIn} />} />
           <Route path="/login" element={<Signup setIsLoggedIn={setIsLoggedIn} />} />
           <Route path="/Register" element={<Signup setIsLoggedIn={setIsLoggedIn} />} />
-          <Route path="/chatwithme" element={<ChatPage />} />
+          <Route path="/chatwithme" element={<ProtectedRoute isAuthenticated={isAuthenticated}><ChatPage /></ProtectedRoute>} />
         </Routes>
       </BrowserRouter>
     </div>
