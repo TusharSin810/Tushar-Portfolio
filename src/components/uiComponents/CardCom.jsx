@@ -4,7 +4,7 @@ import React from "react";
 import { CardBody, CardContainer, CardItem } from "../ui/3d-card"
 
 
-export function CardCom({title,description,link,image}) {
+export function CardCom({title,description,live,code,image}) {
   return (
     <CardContainer className="inter-var">
       <CardBody
@@ -37,14 +37,14 @@ export function CardCom({title,description,link,image}) {
             translateZ={20}
             className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white cursor-pointer"
           >
-            <a href={link} target="_blank">Live</a>
+            <a href={live} target="_blank">Live</a>
           </CardItem>
           <CardItem
             translateZ={20}
             as="button"
             className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
           >
-            <a href={link} target="_blank">Code</a>
+            <a href={code} target="_blank">Code</a>
           </CardItem>
         </div>
       </CardBody>
