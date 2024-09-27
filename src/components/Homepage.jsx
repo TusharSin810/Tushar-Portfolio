@@ -7,6 +7,7 @@ import React, { useEffect, useState } from 'react';
 import LoadingContainer from './LoadingContainer';
 import ParticlesComponent from './Particles'
 import Header from './Header'
+import { Hover } from './uiComponents/Hover'
 
 function Homepage({isLoggedIn}) {
   
@@ -54,6 +55,7 @@ useEffect(() => {
           <Skills />
           <Projects />
           <Exp />
+          <Hover />
       </div>
     </div>
     </div>
