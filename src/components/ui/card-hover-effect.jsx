@@ -9,7 +9,7 @@ export const HoverEffect = ({ items, className }) => {
   return (
     <div
       className={cn(
-        "grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 px-8",
+        "grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 sm:px-8",
         className
       )}
     >
@@ -24,7 +24,7 @@ export const HoverEffect = ({ items, className }) => {
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-2 h-[170px] w-[170px] bg-[#4D0011] dark:bg-slate-800/[0.8] rounded-xl"
+                className="absolute inset-2 h-[170px] w-[150px] sm:w-[170px] bg-[#4D0011] dark:bg-slate-800/[0.8] rounded-xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
