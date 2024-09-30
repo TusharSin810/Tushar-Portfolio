@@ -8,6 +8,7 @@ import LoadingContainer from './LoadingContainer';
 import ParticlesComponent from './Particles'
 import Header from './Header'
 import Education from './Education'
+import ContactMe from './ContactMe'
 
 function Homepage({isLoggedIn}) {
   
@@ -56,6 +57,7 @@ useEffect(() => {
           <Projects />
           <Exp />
           <Education />
+          <ContactMe />
       </div>
     </div>
     </div>

@@ -1,10 +1,13 @@
 import React from 'react'
+import { Meteorscard } from './uiComponents/Meteorscard'
 
 function Education() {
   return (
-    <div className='h-screen w-screen bg-[#4D0011]'>
-       Hello There 
+    <div className='bg-[#E4E5E8] h-screen w-screen'>
+       Hello There
+      <Meteorscard />
     </div>
+   
   )
 }
 

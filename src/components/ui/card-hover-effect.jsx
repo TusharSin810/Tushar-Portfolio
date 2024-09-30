@@ -9,7 +9,7 @@ export const HoverEffect = ({ items, className }) => {
   return (
     <div
       className={cn(
-        "grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 sm:px-8",
+        "grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 sm:px-28",
         className
       )}
     >
@@ -24,7 +24,7 @@ export const HoverEffect = ({ items, className }) => {
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-2 h-[170px] w-[150px] sm:w-[170px] bg-[#4D0011] dark:bg-slate-800/[0.8] rounded-xl"
+                className="absolute inset-2 h-[130px] w-[130px] sm:w-[130px] bg-[#4D0011] dark:bg-slate-800/[0.8] rounded-xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -50,7 +50,7 @@ export const Card = ({ className, children, isHovered, item }) => {
     <div
       className={cn(
         "rounded-xl bg-[#E4E5E8] border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
-        "h-[150px] w-[130px] sm:w-[150px]",
+        "h-[110px] w-[110px] sm:w-[110px]",
         className
       )}
     >
@@ -60,7 +60,7 @@ export const Card = ({ className, children, isHovered, item }) => {
         ) : (
           <img
             src={item.images}
-            className="object-scale-down rounded-md h-[120px] w-full "
+            className="object-scale-down rounded-md h-[80px] w-full "
             alt="Item"
           />
         )}
