@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Bachelor of Technology",
+        "description": "Jaypee Institute of Information Technology | ECE",
+        "year": "2022-2026 | Pursuing",
+        "image": "https://tusharportfolio-images.s3.ap-south-1.amazonaws.com/JIITNoida.png"
+},
+    {
+        "title": "BS in Data Science",
+        "description": "Indian Institute of Technology | IIT-Madras",
+        "year": "2022-2026 | Pursuing",
+        "image":"https://tusharportfolio-images.s3.ap-south-1.amazonaws.com/IITM.png"
+},
+    {
+        "title": "Science | PCM",
+        "description": "Shaheed Rajpal DAV Public School | CBSE",
+        "year": "2020-2021 | Completed",
+        "image":"https://tusharportfolio-images.s3.ap-south-1.amazonaws.com/SRDAV.png"
+}
+]
