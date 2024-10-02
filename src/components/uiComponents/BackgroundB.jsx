@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { BackgroundBeams } from "../ui/background-beams";
+import { SocialIcon } from 'react-social-icons'
 
 export function BackgroundB() {
   return (
@@ -16,6 +17,17 @@ export function BackgroundB() {
 Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.
         </p>
       </div>
+        <div className='flex gap-4 z-50'>
+            <SocialIcon url='https://x.com/TusharS91319723' target='_blank' className='hover:opacity-85' />
+            <SocialIcon url='https://github.com/TusharSin810' target='_blank' className='hover:opacity-85'/>
+            <SocialIcon url='https://www.linkedin.com/in/tushar-singhal-921a41259/' target='_blank' className='hover:opacity-85'/>
+            <SocialIcon url='mailto:tsinghal666@gmail.com' target='_blank' bgColor='#4D0011'className='hover:opacity-85'/>
+          <SocialIcon url='tushar_singhal' target='_blank' className='hover:opacity-85'/> 
+        </div>
+        <div>
+          <h3>tsinghal666@gmail.com</h3>
+          <h3>9999999999</h3>
+        </div>
       <BackgroundBeams />
     </div>)
   );
