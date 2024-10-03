@@ -3,19 +3,8 @@ import React from "react";
 import { BackgroundBeams } from "../ui/background-beams";
 import { SocialIcon } from 'react-social-icons'
 import { Mborder} from "../uiComponents/Mborder";
-import {useNavigate } from 'react-router-dom';
 
 export function BackgroundB() {
-
-const navigate = useNavigate()
-
-function chatpage(){
-    if(localStorage.getItem('token')){
-      navigate('/chatwithme')
-    }else{
-      navigate('/login')
-    }
-}
 
   return (
     (<div
