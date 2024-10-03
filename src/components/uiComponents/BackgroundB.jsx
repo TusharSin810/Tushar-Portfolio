@@ -2,9 +2,21 @@
 import React from "react";
 import { BackgroundBeams } from "../ui/background-beams";
 import { SocialIcon } from 'react-social-icons'
-import { MovingBorder } from "./MovingBorder";
+import { Mborder} from "../uiComponents/Mborder";
+import {useNavigate } from 'react-router-dom';
 
 export function BackgroundB() {
+
+const navigate = useNavigate()
+
+function chatpage(){
+    if(localStorage.getItem('token')){
+      navigate('/chatwithme')
+    }else{
+      navigate('/login')
+    }
+}
+
   return (
     (<div
       className="h-screen w-full rounded-md bg-[#53565A] relative flex flex-col items-center antialiased pt-20 gap-2">
@@ -19,14 +31,14 @@ Feel free to get in touch with me. I am always open to discussing new projects, 
         </p>
       </div>
         <div className='flex gap-4 z-50'>
-            <SocialIcon url='https://x.com/TusharS91319723' target='_blank' className='hover:opacity-85' />
-            <SocialIcon url='https://github.com/TusharSin810' target='_blank' className='hover:opacity-85'/>
-            <SocialIcon url='https://www.linkedin.com/in/tushar-singhal-921a41259/' target='_blank' className='hover:opacity-85'/>
-            <SocialIcon url='mailto:tsinghal666@gmail.com' target='_blank' bgColor='#4D0011'className='hover:opacity-85'/>
-          <SocialIcon url='tushar_singhal' target='_blank' className='hover:opacity-85'/> 
+            <SocialIcon url='https://x.com/TusharS91319723' target='_blank' bgColor='#4D0011' className='hover:opacity-85 opacity-95' />
+            <SocialIcon url='https://github.com/TusharSin810' target='_blank' bgColor='#4D0011' className='hover:opacity-85 opacity-95'/>
+            <SocialIcon url='https://www.linkedin.com/in/tushar-singhal-921a41259/' target='_blank' bgColor='#4D0011' className='hover:opacity-85 opacity-95'/>
+            <SocialIcon url='mailto:tsinghal666@gmail.com' target='_blank' bgColor='#4D0011'className='hover:opacity-85 opacity-95'/>
+          <SocialIcon url='tushar_singhal' target='_blank' bgColor='#4D0011' className='hover:opacity-85 opacity-95'/> 
         </div>
         <div className="flex flex-col pt-4 items-center gap-10">
-          <MovingBorder />
+            <Mborder />
           <div className="flex w-screen justify-evenly">
             <h3>tsinghal666@gmail.com</h3>
             <h3>+91-8826126823</h3>
