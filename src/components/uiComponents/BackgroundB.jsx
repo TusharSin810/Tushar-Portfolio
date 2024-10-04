@@ -3,6 +3,8 @@ import React from "react";
 import { BackgroundBeams } from "../ui/background-beams";
 import { SocialIcon } from 'react-social-icons'
 import { Mborder} from "../uiComponents/Mborder";
+import { FaPhone } from "react-icons/fa6";
+import { IoMail } from "react-icons/io5";
 
 export function BackgroundB() {
 
@@ -29,8 +31,8 @@ Feel free to get in touch with me. I am always open to discussing new projects, 
         <div className="flex flex-col pt-4 items-center gap-10">
             <Mborder />
           <div className="flex w-screen justify-evenly">
-            <h3>tsinghal666@gmail.com</h3>
-            <h3>+91-8826126823</h3>
+            <h3 className="text-[#E4E5E8] flex gap-1"><IoMail className="m-1"/>tsinghal666@gmail.com</h3>
+            <h3 className="text-[#E4E5E8] flex gap-1"><FaPhone className="m-1"/>+91-8826126823</h3>
           </div>
         </div>
       <BackgroundBeams />
