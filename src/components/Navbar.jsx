@@ -41,7 +41,7 @@ export default function Navbar({isLoggedIn}) {
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
                       item.current ? 'bg-[#4D0011] text-[#E4E5E8] rounded-xl' : 'text-black',
-                      'px-3 py-2 text-sm font-medium',
+                      'px-3 py-2 text-m font-medium',
                     )}
                   >
                     {item.name}

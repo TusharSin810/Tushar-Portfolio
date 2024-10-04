@@ -23,8 +23,8 @@ function Skills() {
   ];
 
   return (
-    <div className='h-max bg-[#53565A] pb-16'>
-      <h2 className='flex w-screen justify-center text-[#4D0011] font-extrabold text-2xl p-8'>Skills & Tools</h2>
+    <div className='h-max bg-white pb-16'>
+      <h2 className='flex w-screen justify-center text-black font-extrabold text-4xl p-8'>Skills & Tools</h2>
       <div className="max-w-5xl mx-auto px-8">
         <HoverEffect items={skills} />
       </div>

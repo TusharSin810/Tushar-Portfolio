@@ -49,14 +49,14 @@ export const Card = ({ className, children, isHovered, item }) => {
   return (
     <div
       className={cn(
-        "rounded-xl bg-[#E4E5E8] border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-xl bg-[#53565A] border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
         "h-[110px] w-[110px] sm:w-[110px]",
         className
       )}
     >
       <div className="relative z-50 flex items-center justify-center h-full">
         {isHovered ? (
-          <p className="text-black font-semibold text-center">{item?.name || "Default Text"}</p>
+          <p className="text-white font-semibold text-center">{item?.name || "Default Text"}</p>
         ) : (
           <img
             src={item.images}
