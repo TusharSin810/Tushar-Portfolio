@@ -19,5 +19,12 @@
         "image":"https://tusharportfolio-images.s3.ap-south-1.amazonaws.com/KeeperApp.png",
         "live":"https://github.com/TusharSin810",
         "code":"https://github.com/TusharSin810/Keeper_App"
+},
+    {
+        "title": "vAIdya",
+        "description": "This is a AI integrated website which uses ML models to predicte diseases",
+        "image":"https://tusharportfolio-images.s3.ap-south-1.amazonaws.com/vAIdya.png",
+        "live":"https://github.com/TusharSin810",
+        "code":"https://github.com/TusharSin810/v-AI-dya"
 }
 ]
