@@ -18,7 +18,7 @@ export default function Navbar({isLoggedIn}) {
     localStorage.removeItem('token');
   }
 
-  const userProfilePic = "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" 
+  const userProfilePic = "/images/Profile.png" 
 
   return (
     <Disclosure as="nav">
@@ -70,7 +70,7 @@ export default function Navbar({isLoggedIn}) {
                         <img
                           alt=""
                           src={userProfilePic}
-                          className="h-8 w-8 rounded-full"
+                          className="h-8 w-8 rounded-full bg-[#E4E5E8]"
                         />
                       </MenuButton>
                     </div>
