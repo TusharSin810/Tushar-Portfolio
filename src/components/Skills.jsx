@@ -19,7 +19,7 @@ function Skills() {
     { images: "/images/solidity.svg", alt: "Solidity", name: "Solidity" },
     { images: "/images/machinelearning.svg", alt: "Machine Learning", name: "Machine Learning" },
     { images: "/images/data.svg", alt: "Data Science", name: "Data Science" },
-    { images: "/images/git.svg", alt: "Git", name: "Git" }
+    { images: "/images/git.svg", alt: "Git", name: "Git" },
   ];
 
   return (
