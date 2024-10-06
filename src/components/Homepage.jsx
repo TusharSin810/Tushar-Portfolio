@@ -1,36 +1,36 @@
-import Navbar from './Navbar'
-import About from './About'
-import Skills from './Skills'
-import Projects from './Projects'
-import Exp from './Exp'
+import Navbar from './Navbar';
+import About from './About';
+import Skills from './Skills';
+import Projects from './Projects';
+import Exp from './Exp';
 import React, { useEffect, useState } from 'react';
 import LoadingContainer from './LoadingContainer';
-import ParticlesComponent from './Particles'
-import Header from './Header'
-import Education from './Education'
-import ContactMe from './ContactMe'
+import ParticlesComponent from './Particles';
+import Header from './Header';
+import Education from './Education';
+import ContactMe from './ContactMe';
+import ScrollAnimation from './uiComponents/ScrollAnimation';
 
-function Homepage({isLoggedIn}) {
-  
+function Homepage({ isLoggedIn }) {
   const [loading, setLoading] = useState(true);
   const [transitionEnded, setTransitionEnded] = useState(false);
-  
-useEffect(() => {
-  const visited = sessionStorage.getItem('visited');
-  
-  if (!visited) {
-    setLoading(true);
 
-    const timer = setTimeout(() => {
+  useEffect(() => {
+    const visited = sessionStorage.getItem('visited');
+
+    if (!visited) {
+      setLoading(true);
+
+      const timer = setTimeout(() => {
+        setLoading(false);
+        sessionStorage.setItem('visited', 'true');
+      }, 2300);
+
+      return () => clearTimeout(timer);
+    } else {
       setLoading(false);
-      sessionStorage.setItem('visited', 'true');
-    }, 2300);
-
-    return () => clearTimeout(timer);
-  } else {
-    setLoading(false);
-  }
-}, []);
+    }
+  }, []);
 
   useEffect(() => {
     if (!loading) {
@@ -40,28 +40,44 @@ useEffect(() => {
 
   return (
     <div>
-      <div className="h-screen w-screen no-scrollbar overflow-y-scroll overflow-x-hidden"> 
-      <ParticlesComponent id="particles"/> 
-      <div className={`transition-opacity duration-2000 ease-in-out ${
-          loading ? 'opacity-100' : 'opacity-0'
-        } ${transitionEnded ? 'pointer-events-none' : 'pointer-events-auto'}`}>
-        <LoadingContainer isActive ={loading}/>
-      </div>
-      <div className={`transition-opacity duration-2000 delay-700 ease-in-out ${
-          loading ? 'opacity-0' : 'opacity-100'
-        }`}>
-          <Navbar isLoggedIn={isLoggedIn}/>       
+      <div className="h-screen w-screen no-scrollbar overflow-y-scroll overflow-x-hidden">
+        <ParticlesComponent id="particles" />
+        <div
+          className={`transition-opacity duration-2000 ease-in-out ${
+            loading ? 'opacity-100' : 'opacity-0'
+          } ${transitionEnded ? 'pointer-events-none' : 'pointer-events-auto'}`}
+        >
+          <LoadingContainer isActive={loading} />
+        </div>
+        <div
+          className={`transition-opacity duration-2000 delay-700 ease-in-out ${
+            loading ? 'opacity-0' : 'opacity-100'
+          }`}
+        >
+          <Navbar isLoggedIn={isLoggedIn} />
           <Header />
-          <About />
-          <Skills />
-          <Projects />
-          <Exp />
-          <Education />
-          <ContactMe />
+          <ScrollAnimation>
+            <About />
+          </ScrollAnimation>
+          <ScrollAnimation>
+            <Skills />
+          </ScrollAnimation>
+          <ScrollAnimation>
+            <Projects />
+          </ScrollAnimation>
+          <ScrollAnimation>
+            <Exp />
+          </ScrollAnimation>
+          <ScrollAnimation>
+            <Education />
+          </ScrollAnimation>
+          <ScrollAnimation>
+            <ContactMe />
+          </ScrollAnimation>
+        </div>
       </div>
     </div>
-    </div>
-  )
+  );
 }
 
-export default Homepage
+export default Homepage;
