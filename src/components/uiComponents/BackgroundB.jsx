@@ -30,7 +30,7 @@ Feel free to get in touch with me. I am always open to discussing new projects, 
         </div>
         <div className="flex flex-col pt-4 items-center gap-10">
             <Mborder />
-          <div className="flex w-screen justify-evenly">
+          <div className="flex flex-col gap-4 sm:flex-row sm:justify-evenly sm:w-screen">
             <h3 className="text-[#E4E5E8] flex gap-1"><IoMail className="m-1"/>tsinghal666@gmail.com</h3>
             <h3 className="text-[#E4E5E8] flex gap-1"><FaPhone className="m-1"/>+91-8826126823</h3>
           </div>

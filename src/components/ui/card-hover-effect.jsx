@@ -9,7 +9,7 @@ export const HoverEffect = ({ items, className }) => {
   return (
     <div
       className={cn(
-        "grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 sm:px-18",
+        "grid grid-cols-3 md:grid-cols-4 lg:grid-cols-8 sm:px-18",
         className
       )}
     >
@@ -24,7 +24,7 @@ export const HoverEffect = ({ items, className }) => {
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-2 h-[130px] w-[130px] sm:w-[130px] bg-[#4D0011] bg-opacity-85 dark:bg-slate-800/[0.8] rounded-2xl"
+                className="absolute inset-2 h-[100px] w-[100px] sm:h-[130px] sm:w-[130px] bg-[#4D0011] bg-opacity-85 dark:bg-slate-800/[0.8] rounded-2xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -49,8 +49,8 @@ export const Card = ({ className, children, isHovered, item }) => {
   return (
     <div
       className={cn(
-        "rounded-xl bg-[#E4E5E8] border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
-        "h-[110px] w-[110px] sm:w-[110px]",
+        "rounded-xl bg-[#E4E5E8] border-black/55 border-4 dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "h-[80px] w-[80px] sm:w-[110px] sm:h-[110px]",
         className
       )}
     >
