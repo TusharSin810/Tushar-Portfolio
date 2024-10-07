@@ -1,6 +1,7 @@
 import React from 'react'
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import {motion}  from 'framer-motion'
+import ScrollAnimation from './uiComponents/ScrollAnimation';
 
 const words = `I’m an undergraduate student from India pursuing a B.Tech in Electronics and Communication Engineering at Jaypee Institute of Information Technology (JIIT), Noida. Passionate about coding and full-stack development, I enjoy building dynamic, scalable web applications with a focus on innovation and performance.
 
@@ -13,6 +14,7 @@ function About() {
   return (
     <div>
         <div className='h-max bg-[#53565A]/80 pb-8'>
+        <ScrollAnimation>
             <h2 className='text-4xl font-extrabold flex w-screen justify-center p-5 pt-10 text-[#E4E5E8]'>About Me</h2>
             <div className='flex flex-col items-center'>
                 <div className='p-6 flex sm:hidden text-center font-semibold'>
@@ -27,6 +29,7 @@ function About() {
                 transition={{ delay: 17.5, duration: 1 }}
                 >"Always exploring new tech stacks to push boundaries and innovate."</motion.p>
             </div>
+        </ScrollAnimation>
         </div>
     </div>
   )

@@ -1,5 +1,6 @@
 import React from "react";
 import { Timeline } from "./ui/timeline";
+import ScrollAnimation from "./uiComponents/ScrollAnimation";
 
 export default function Exp() {
   const data = [
@@ -144,8 +145,10 @@ export default function Exp() {
     },
   ];
   return (
-    (<div className="w-full">
-      <Timeline data={data} />
+    (<div className="w-full bg-white">
+      <ScrollAnimation>
+        <Timeline data={data} />
+      </ScrollAnimation>
     </div>)
   );
 }

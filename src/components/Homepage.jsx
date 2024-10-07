@@ -56,24 +56,12 @@ function Homepage({ isLoggedIn }) {
         >
           <Navbar isLoggedIn={isLoggedIn} />
           <Header />
-          <ScrollAnimation>
-            <About />
-          </ScrollAnimation>
-          <ScrollAnimation>
-            <Skills />
-          </ScrollAnimation>
-          <ScrollAnimation>
-            <Projects />
-          </ScrollAnimation>
-          <ScrollAnimation>
-            <Exp />
-          </ScrollAnimation>
-          <ScrollAnimation>
-            <Education />
-          </ScrollAnimation>
-          <ScrollAnimation>
-            <ContactMe />
-          </ScrollAnimation>
+          <About />
+          <Skills />
+          <Projects />
+          <Exp />
+          <Education />
+          <ContactMe />
         </div>
       </div>
     </div>

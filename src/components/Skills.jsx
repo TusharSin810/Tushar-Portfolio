@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { HoverEffect } from './ui/card-hover-effect';
+import ScrollAnimation from './uiComponents/ScrollAnimation';
 
 function Skills() {
 
@@ -24,11 +25,12 @@ function Skills() {
 
   return (
     <div className='h-max bg-white pb-16'>
+      <ScrollAnimation>
       <h2 className='flex w-screen justify-center text-black font-extrabold text-4xl p-8'>Skills & Tools</h2>
       <div className="max-w-5xl mx-auto px-8">
         <HoverEffect items={skills} />
       </div>
-     
+     </ScrollAnimation>
     </div>
   );
 }
