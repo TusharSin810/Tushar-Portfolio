@@ -10,6 +10,7 @@ import Header from './Header';
 import Education from './Education';
 import ContactMe from './ContactMe';
 import ScrollAnimation from './uiComponents/ScrollAnimation';
+import { WCard } from './uiComponents/WCard';
 
 function Homepage({ isLoggedIn }) {
   const [loading, setLoading] = useState(true);
@@ -59,6 +60,9 @@ function Homepage({ isLoggedIn }) {
           <About />
           <Skills />
           <Projects />
+          <div className='bg-white p-16'>
+            <WCard />
+          </div>
           <Exp />
           <Education />
           <ContactMe />
