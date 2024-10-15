@@ -61,9 +61,6 @@ function Homepage({ isLoggedIn }) {
           <About />
           <Skills />
           <Projects />
-          <div className='bg-white p-16'>
-            <WCard />
-          </div>
           <Exp />
           <Education />
           <ContactMe />

@@ -18,6 +18,8 @@ export function WCard() {
             With over 100,000 mothly active bot users, Gippity AI is the most
             popular AI platform for developers.
           </p>
+          <button className="px-3 mt-3 bg-black text-white rounded-xl mr-2">code</button>
+          <button className="px-3 mt-3 bg-black text-white rounded-xl">Live</button>
         </div>
         <img
           src="https://tusharportfolio-images.s3.ap-south-1.amazonaws.com/Portfolio.png"
