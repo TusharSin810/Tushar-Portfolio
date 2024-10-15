@@ -11,7 +11,7 @@ import Education from './Education';
 import ContactMe from './ContactMe';
 import ScrollAnimation from './uiComponents/ScrollAnimation';
 import { WCard } from './uiComponents/WCard';
-import { BGrid } from './uiComponents/BGrid';
+
 
 function Homepage({ isLoggedIn }) {
   const [loading, setLoading] = useState(true);
@@ -64,7 +64,6 @@ function Homepage({ isLoggedIn }) {
           <div className='bg-white p-16'>
             <WCard />
           </div>
-          <BGrid />
           <Exp />
           <Education />
           <ContactMe />
