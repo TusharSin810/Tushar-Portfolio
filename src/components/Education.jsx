@@ -2,6 +2,7 @@ import React from 'react'
 import { Meteorscard } from './uiComponents/Meteorscard'
 import eCard from '../../data/educationCard.json'
 import ScrollAnimation from './uiComponents/ScrollAnimation'
+import { CardCom } from './uiComponents/CardCom'
 function Education() {
   return (
     <div className='bg-white h-screen w-screen flex flex-col items-center p-8 gap-10'>
@@ -12,6 +13,7 @@ function Education() {
           <Meteorscard key={data.id || index} title={data.title} description={data.description} image={data.image} year={data.year}/>
         ))}
        </div>
+       <CardCom />
       </ScrollAnimation>
     </div>
    
