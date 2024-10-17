@@ -14,6 +14,7 @@ function Education() {
         ))}
        </div>
        <CardCom />
+       <CardCom />
       </ScrollAnimation>
     </div>
    
