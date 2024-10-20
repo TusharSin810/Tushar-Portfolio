@@ -12,14 +12,15 @@ export function WCard() {
         <div className="max-w-xs">
           <h2
             className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            Gippity AI powers the entire universe
+            PortFolio Website
           </h2>
           <p className="mt-4 text-left  text-base/6 text-neutral-200">
-            With over 100,000 mothly active bot users, Gippity AI is the most
-            popular AI platform for developers.
+            Build Using React, Express, Taliwind CSS, Node JS. Made Us Of UI Libraries Like Aceternity UI
           </p>
+          <div>
           <button className="px-3 mt-3 bg-black text-white rounded-xl mr-2">code</button>
           <button className="px-3 mt-3 bg-black text-white rounded-xl">Live</button>
+          </div>
         </div>
         <img
           src="https://tusharportfolio-images.s3.ap-south-1.amazonaws.com/Portfolio.png"
