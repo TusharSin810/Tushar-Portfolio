@@ -12,7 +12,7 @@ export function CardCom({title,description,year,image}) {
       >
         <CardItem
           translateZ="50"
-          className="text-xl font-bold text-white pt-4"
+          className="text-2xl font-bold text-white pt-4"
         >
           {title}
         </CardItem>
