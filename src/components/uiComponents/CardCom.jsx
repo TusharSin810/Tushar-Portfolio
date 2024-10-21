@@ -30,7 +30,7 @@ export function CardCom({title,description,year,image}) {
             src={image}
             height="1000"
             width="1000"
-            className="h-48 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+            className="h-44 sm:h-48 w-full object-cover rounded-xl group-hover/card:shadow-xl"
             alt="thumbnail"
           />
         </CardItem>
