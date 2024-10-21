@@ -17,9 +17,9 @@ export function WCard() {
           <p className="mt-4 text-left  text-base/6 text-neutral-200">
             Build Using React, Express, Taliwind CSS, Node JS. Made Us Of UI Libraries Like Aceternity UI
           </p>
-          <div>
-          <button className="px-3 mt-3 bg-black text-white rounded-xl mr-2">code</button>
-          <button className="px-3 mt-3 bg-black text-white rounded-xl">Live</button>
+          <div className="pt-2">
+          <a href="https://github.com/TusharSin810" target="_blank" className="px-4 py-1 mt-3 bg-black text-white rounded-xl mr-2">Code</a>
+          <a href="https://github.com/TusharSin810" target="_blank" className="px-4 py-1 mt-3 bg-black text-white rounded-xl ">Live</a>
           </div>
         </div>
         <img
@@ -37,6 +37,10 @@ export function WCard() {
         <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
           If someone yells “stop!”, goes limp, or taps out, the fight is over.
         </p>
+         <div className="pt-2">
+          <a href="https://github.com/TusharSin810" target="_blank" className="px-4 py-1 mt-3 bg-black text-white rounded-xl mr-2">Code</a>
+          <a href="https://github.com/TusharSin810" target="_blank" className="px-4 py-1 mt-3 bg-black text-white rounded-xl ">Live</a>
+          </div>
       </WobbleCard>
       <WobbleCard
         containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
@@ -51,6 +55,10 @@ export function WCard() {
             popular AI platform for developers.
           </p>
         </div>
+         <div className="pt-2">
+          <a href="https://github.com/TusharSin810" target="_blank" className="px-4 py-1 mt-3 bg-black text-white rounded-xl mr-2">Code</a>
+          <a href="https://github.com/TusharSin810" target="_blank" className="px-4 py-1 mt-3 bg-black text-white rounded-xl ">Live</a>
+          </div>
         <img
           src="https://tusharportfolio-images.s3.ap-south-1.amazonaws.com/Portfolio.png"
           width={500}
@@ -66,6 +74,10 @@ export function WCard() {
         <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
           If someone yells “stop!”, goes limp, or taps out, the fight is over.
         </p>
+         <div className="pt-2">
+          <a href="https://github.com/TusharSin810" target="_blank" className="px-4 py-1 mt-3 bg-black text-white rounded-xl mr-2">Code</a>
+          <a href="https://github.com/TusharSin810" target="_blank" className="px-4 py-1 mt-3 bg-black text-white rounded-xl ">Live</a>
+          </div>
         <img
           src="https://tusharportfolio-images.s3.ap-south-1.amazonaws.com/Portfolio.png"
           width={300}
@@ -86,6 +98,10 @@ export function WCard() {
             popular AI platform for developers.
           </p>
         </div>
+         <div className="pt-2">
+          <a href="https://github.com/TusharSin810" target="_blank" className="px-4 py-1 mt-3 bg-black text-white rounded-xl mr-2">Code</a>
+          <a href="https://github.com/TusharSin810" target="_blank" className="px-4 py-1 mt-3 bg-black text-white rounded-xl ">Live</a>
+          </div>
         <img
           src="https://tusharportfolio-images.s3.ap-south-1.amazonaws.com/Portfolio.png"
           width={500}
