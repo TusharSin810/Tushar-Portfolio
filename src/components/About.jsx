@@ -13,17 +13,17 @@ const words1 = `I’m an undergraduate student from India pursuing a B.Tech in E
 function About() {
   return (
     <div>
-        <div className='h-max bg-[#53565A]/80 pb-8'>
+        <div className='h-max bg-[#53565A]/80 pb-8 px-6'>
         <ScrollAnimation>
-            <h2 className='text-4xl font-extrabold flex w-screen justify-center p-5 pt-10 text-[#E4E5E8]'>About Me</h2>
-            <div className='flex flex-col items-center'>
-                <div className='p-6 flex sm:hidden text-center font-semibold'>
+            <h2 className='text-5xl font-extrabold flex w-screen justify-start p-5 pt-10 text-[#E4E5E8]'>About Me</h2>
+            <div className='flex flex-col items-start'>
+                <div className='p-6 flex sm:hidden text-start font-semibold'>
                     <TextGenerateEffect words={words1} />
                 </div>
-                <div className='hidden p-4 sm:flex sm:w-3/5 text-center font-semibold'>
+                <div className='hidden p-4 sm:flex sm:w-3/5 text-start font-semibold'>
                     <TextGenerateEffect words={words} />
                 </div> 
-                <motion.p className='px-6 pb-2 text-center text-lg font-bold text-[#E4E5E8]'
+                <motion.p className='px-6 pb-2 text-start text-lg font-bold text-[#E4E5E8]'
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 17.5, duration: 1 }}
