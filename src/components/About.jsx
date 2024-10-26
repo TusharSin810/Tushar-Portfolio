@@ -20,7 +20,7 @@ function About() {
                 <div className='p-6 flex sm:hidden text-start font-semibold'>
                     <TextGenerateEffect words={words1} />
                 </div>
-                <div className='hidden p-4 sm:flex sm:w-3/5 text-start font-semibold'>
+                <div className='hidden p-4 sm:flex sm:w-4/5 text-start font-semibold'>
                     <TextGenerateEffect words={words} />
                 </div> 
                 <motion.p className='px-6 pb-2 text-start text-lg font-bold text-[#E4E5E8]'
