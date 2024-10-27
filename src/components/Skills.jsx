@@ -28,7 +28,7 @@ function Skills() {
     <div className='h-max bg-white pb-16'>
       <ScrollAnimation>
       <div className="px-16 bg-[#53565A]/50 py-10">
-        <h2 className='flex w-screen justify-start text-black font-extrabold text-5xl p-8'>Skills & Tools</h2>
+        <h2 className='flex w-screen justify-start text-black font-extrabold text-5xl font-mono p-8'>Skills & Tools</h2>
         <HoverEffect items={skills} />
       </div>
      </ScrollAnimation>
