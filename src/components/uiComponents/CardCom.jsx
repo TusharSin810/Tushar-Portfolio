@@ -8,18 +8,18 @@ export function CardCom({title,description,year,image}) {
   return (
     <CardContainer className="inter-var">
       <CardBody
-        className="bg-[#53565A] relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[24rem] h-[24rem] rounded-xl p-6 border"
+        className="bg-gray-300 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[24rem] h-[24rem] rounded-xl p-6 border"
       >
         <CardItem
           translateZ="50"
-          className="text-2xl font-bold text-white pt-4"
+          className="text-2xl font-bold text-black pt-4"
         >
           {title}
         </CardItem>
         <CardItem
           as="p"
           translateZ="60"
-          className="text-sm max-w-sm mt-2 text-neutral-300"
+          className="text-sm max-w-sm mt-2 text-gray-900"
         >
           {description}
           <br />
