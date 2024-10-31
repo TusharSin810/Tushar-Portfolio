@@ -64,7 +64,7 @@ export function WCard() {
           width={500}
           height={500}
           alt="linear demo image"
-          className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 object-contain rounded-2xl" />
+          className="absolute -right-10 md:-right-[40%] lg:right-[5%] -bottom-10 object-contain rounded-2xl" />
       </WobbleCard>
         <WobbleCard containerClassName="col-span-1 min-h-[300px]">
         <h2
@@ -83,7 +83,7 @@ export function WCard() {
           width={300}
           height={200}
           alt="linear demo image"
-          className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl" />
+          className="-z-50 absolute -right-4 lg:-right-[5%] grayscale filter -bottom-5 object-contain rounded-2xl" />
       </WobbleCard>
        <WobbleCard
         containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
@@ -107,7 +107,7 @@ export function WCard() {
           width={500}
           height={500}
           alt="linear demo image"
-          className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl" />
+          className="absolute -right-4 lg:-right-[5%] grayscale filter -bottom-10 object-contain rounded-2xl" />
       </WobbleCard>
     </div>)
   );
