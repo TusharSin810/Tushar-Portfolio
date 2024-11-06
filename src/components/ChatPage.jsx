@@ -7,7 +7,7 @@ function ChatPage() {
         <div className='bg-[#E4E5E8] h-96 w-4/5 flex justify-between rounded-3xl'></div>
         <div>
           <div className='flex gap-4 mb-10 p-3 px-[65px] rounded-3xl bg-[#E4E5E8]'>
-            <input type='text' placeholder='Type Your Message' className='rounded-full px-72 p-1'/>
+            <input type='text' placeholder='Type Your Message' className='rounded-full pr-[710px] px-3'/>
             <button className='bg-[#4D0011] p-2 px-6 rounded-full text-[#E4E5E8]'>Send</button>
           </div>
         </div> 
