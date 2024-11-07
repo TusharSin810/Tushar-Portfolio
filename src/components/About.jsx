@@ -13,7 +13,7 @@ const words1 = `I’m an undergraduate student from India pursuing a B.Tech in E
 function About() {
   return (
     <div>
-        <div className='h-max bg-[#53565A]/80 pb-8 px-6'>
+        <div className='h-max bg-[#53565A]/80 py-8 px-2 sm:h-screen sm:px-6'>
         <ScrollAnimation>
             <h2 className='text-5xl font-extrabold flex w-screen justify-start p-5 pt-10 text-[#E4E5E8]'>About Me</h2>
             <div className='flex flex-col items-start'>
