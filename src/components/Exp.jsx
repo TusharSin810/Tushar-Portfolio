@@ -42,7 +42,7 @@ export default function Exp() {
       ),
     },
     {
-      title: "Early 2023",
+      title: "Late 2023",
       content: (
         <div>
           <p
@@ -85,7 +85,7 @@ export default function Exp() {
       ),
     },
     {
-      title: "Changelog",
+      title: "Early 2023",
       content: (
         <div>
           <p
