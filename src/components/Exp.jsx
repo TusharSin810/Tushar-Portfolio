@@ -90,7 +90,7 @@ export default function Exp() {
         <div>
           <p
             className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-            Deployed 5 new components on Aceternity today
+            Deployed 5 new components on Aceternity today. All the Components Were Latest And Conations Fresh Designs Never used in any other website 
           </p>
           <div className="mb-8">
             <div
