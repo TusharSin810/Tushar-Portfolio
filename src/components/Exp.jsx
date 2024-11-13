@@ -11,6 +11,7 @@ export default function Exp() {
           <p
             className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
             Built and Updated JODC Website from scratch using React JS , Node Js And Java Script.
+            It is a MERN Stack Single Page Application utilizing different UI libraries
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
