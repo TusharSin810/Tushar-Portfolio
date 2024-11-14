@@ -96,11 +96,11 @@ export default function Exp() {
           <div className="mb-8">
             <div
               className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Card grid component  Hello World
+              ✅ Portfolio Website
             </div>
             <div
               className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-              ✅ Startup template Aceternity
+              ✅ JODC Website
             </div>
             <div
               className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
