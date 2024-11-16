@@ -9,8 +9,6 @@ import ParticlesComponent from './Particles';
 import Header from './Header';
 import Education from './Education';
 import ContactMe from './ContactMe';
-import ScrollAnimation from './uiComponents/ScrollAnimation';
-import { WCard } from './uiComponents/WCard';
 
 
 function Homepage({ isLoggedIn }) {
