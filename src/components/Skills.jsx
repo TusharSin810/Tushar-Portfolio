@@ -23,6 +23,7 @@ function Skills() {
     { images: "/images/git.svg", alt: "Git", name: "Git" },
     { images: "/images/nextjs.svg", alt: "Nextjs", name: "Next Js" },
     { images: "/images/recoil-js.svg", alt: "RecoilJS", name: "Recoil Js" },
+    { images: "/images/ts.svg", alt: "TypeScript", name: "TypeScript" },
   ];
 
   return (
