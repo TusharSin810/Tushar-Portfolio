@@ -41,7 +41,7 @@ export default function Navbar({isLoggedIn}) {
                     aria-current={item.current ? 'page' : undefined}
                     className={classNames(
                       item.current ? 'bg-[#4D0011] text-[#E4E5E8] rounded-xl' : 'text-black',
-                      'px-3 py-2 text-m font-medium',
+                      'px-3 py-1 text-m font-medium',
                     )}
                   >
                     {item.name}
@@ -51,13 +51,13 @@ export default function Navbar({isLoggedIn}) {
                   <div className='flex gap-x-3'>
                     <a
                       href="/login"
-                      className="bg-[#4D0011] text-[#E4E5E8] px-3 py-2 text-sm font-medium rounded-xl"
+                      className="bg-[#4D0011] text-[#E4E5E8] px-3 py-2 text-sm font-medium rounded-2xl"
                     >
                       Log-In
                     </a>
                     <a
                       href="/Register"
-                      className="bg-[#53565A] text-[#4D0011] px-3 py-2 text-sm font-medium rounded-xl"
+                      className="bg-[#53565A] text-[#4D0011] px-3 py-2 text-sm font-medium rounded-2xl"
                     >
                       Register
                     </a>
