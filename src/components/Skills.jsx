@@ -24,6 +24,7 @@ function Skills() {
     { images: "/images/nextjs.svg", alt: "Nextjs", name: "Next Js" },
     { images: "/images/recoil-js.svg", alt: "RecoilJS", name: "Recoil Js" },
     { images: "/images/ts.svg", alt: "TypeScript", name: "TypeScript" },
+    { images: "/images/mongodb.svg", alt: "MongoDB", name: "MongoDB" },
   ];
 
   return (
