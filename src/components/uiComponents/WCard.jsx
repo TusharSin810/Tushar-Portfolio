@@ -32,10 +32,10 @@ export function WCard() {
       <WobbleCard containerClassName="col-span-1 min-h-[300px]">
         <h2
           className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-          No shirt, no shoes, no weapons.
+          JODC Website
         </h2>
         <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-          If someone yells “stop!”, goes limp, or taps out, the fight is over.
+          Created College Club Website From Scratch
         </p>
          <div className="pt-2">
           <a href="https://github.com/TusharSin810" target="_blank" className="px-4 py-1 mt-3 bg-black text-white rounded-xl mr-2">Code</a>
