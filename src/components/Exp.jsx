@@ -86,12 +86,12 @@ export default function Exp() {
       ),
     },
     {
-      title: "Early 2023",
+      title: "2023",
       content: (
         <div>
           <p
             className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-            Deployed 5 new components on Aceternity today. All the Components Were Latest And Conations Fresh Designs Never used in any other website 
+            I am an active member of the Robotics Club at my college, CICR, where I contributed to various technical projects. Additionally, I served as a core team member of the JODC (Open Source Developers Club), collaborating on open-source initiatives and mentoring peers.
           </p>
           <div className="mb-8">
             <div
