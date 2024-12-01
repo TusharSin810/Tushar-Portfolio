@@ -17,7 +17,7 @@ export function Mborder() {
 
   return (
     (<div>
-      <Button onClick={chatpage}>
+      <Button onClick={chatpage} className="font-bold">
         Let's Talk
       </Button>
     </div>)
