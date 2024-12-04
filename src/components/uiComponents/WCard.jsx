@@ -91,7 +91,7 @@ export function WCard() {
         <div className="max-w-xs">
           <h2
             className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            Universe is Good
+            This Is a PlaceHolder Text 
           </h2>
           <p className="mt-4 text-left  text-base/6 text-neutral-200">
             With over 100,000 mothly active bot users, Gippity AI is the most
