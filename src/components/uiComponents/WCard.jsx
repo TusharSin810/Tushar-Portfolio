@@ -94,8 +94,7 @@ export function WCard() {
             This Is a PlaceHolder Text 
           </h2>
           <p className="mt-4 text-left  text-base/6 text-neutral-200">
-            With over 100,000 mothly active bot users, Gippity AI is the most
-            popular AI platform for developers.
+            I am a full stack Developer . Creating Functional Websites from scratch
           </p>
         </div>
          <div className="pt-2">
