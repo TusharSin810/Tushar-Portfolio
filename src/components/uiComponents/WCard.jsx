@@ -72,7 +72,7 @@ export function WCard() {
           Solana Token Launch Pad
         </h2>
         <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-          Created a Token Launchpad Based on Solana Blockchain.
+          Created a Token Launchpad Based on Solana Blockchain. Used React Libraries Like Web3.js
         </p>
          <div className="pt-2">
           <a href="https://github.com/TusharSin810" target="_blank" className="px-4 py-1 mt-3 bg-black text-white rounded-xl mr-2">Code</a>
