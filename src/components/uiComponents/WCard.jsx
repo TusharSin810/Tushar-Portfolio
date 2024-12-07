@@ -15,7 +15,7 @@ export function WCard() {
             PortFolio Website
           </h2>
           <p className="mt-4 text-left  text-base/6 text-neutral-200">
-            Build Using React, Express, Taliwind CSS, Node JS. Made Us Of UI Libraries Like Aceternity UI
+            Build Using React, Express, Taliwind CSS, Node JS. Made Us Of UI Libraries Like Aceternity UI. Website also have a unique feature of chat with me. which is a live chatting feature with the host only.
           </p>
           <div className="pt-2">
           <a href="https://github.com/TusharSin810" target="_blank" className="px-4 py-1 mt-3 bg-black text-white rounded-xl mr-2">Code</a>
