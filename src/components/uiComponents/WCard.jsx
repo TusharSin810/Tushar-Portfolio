@@ -94,7 +94,7 @@ export function WCard() {
             This Is a PlaceHolder Text 
           </h2>
           <p className="mt-4 text-left  text-base/6 text-neutral-200">
-            I am a full stack Developer . Creating Functional Websites from scratch
+            I am a full stack Developer . Creating Functional Websites from scratch And Help in building exciting products 
           </p>
         </div>
          <div className="pt-2">
