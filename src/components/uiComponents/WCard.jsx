@@ -72,7 +72,7 @@ export function WCard() {
           Solana Token Launch Pad
         </h2>
         <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-          Created a Token Launchpad Based on Solana Blockchain. Used React Libraries Like Web3.js
+          Developed a Token Launchpad on the Solana blockchain, enabling users to create and manage token launches seamlessly. Utilized advanced features of React.js alongside libraries like Web3.js and Solana Web3.js for efficient integration with the blockchain. Implemented functionalities such as token minting, allocation, and user-friendly interfaces for seamless interaction with the decentralized platform.
         </p>
          <div className="pt-2">
           <a href="https://github.com/TusharSin810" target="_blank" className="px-4 py-1 mt-3 bg-black text-white rounded-xl mr-2">Code</a>
