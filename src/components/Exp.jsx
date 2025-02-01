@@ -91,7 +91,7 @@ export default function Exp() {
         <div>
           <p
             className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-            I am an active member of the Robotics Club at my college, CICR, where I contributed to various technical projects. Additionally, I served as a core team member of the JODC (Open Source Developers Club), collaborating on open-source initiatives and mentoring peers.
+            I was the Head Of Operations of the Robotics Club at my college for one year, CICR, where I contributed to various technical projects. Additionally, I served as a core team member of the JODC (Open Source Developers Club), collaborating on open-source initiatives and mentoring peers.
           </p>
           <div className="mb-8">
             <div
