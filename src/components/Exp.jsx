@@ -5,13 +5,12 @@ import ScrollAnimation from "./uiComponents/ScrollAnimation";
 export default function Exp() {
   const data = [
     {
-      title: "2024",
+      title: "2025",
       content: (
         <div>
           <p
             className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            Built and Updated JODC Website from scratch using React JS , Node Js And Java Script.
-            It is a MERN Stack Single Page Application utilizing different UI libraries
+            Did a 3 months Internship With BuzzVerse. Helped in developing Beta version of the website For the Company.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <img
@@ -43,13 +42,13 @@ export default function Exp() {
       ),
     },
     {
-      title: "Late 2023",
+      title: "Late 2024",
       content: (
         <div>
           <p
             className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-            I usually run out of copy, but when I see content this big, I try to
-            integrate lorem ipsum.
+            Built and Updated JODC Website from scratch using React JS , Node Js And Java Script.
+            It is a MERN Stack Single Page Application utilizing different UI libraries
           </p>
           <p
             className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
